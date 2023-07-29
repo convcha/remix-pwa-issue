@@ -1,5 +1,6 @@
 /// <reference lib="WebWorker" />
 
+import { Push } from "@remix-pwa/push";
 import { PrecacheHandler } from "@remix-pwa/sw";
 
 export type {};

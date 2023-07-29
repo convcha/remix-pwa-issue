@@ -8,12 +8,16 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { useSWEffect } from '@remix-pwa/sw';
 
 export const links: LinksFunction = () => [
+  { rel: "manifest", href: "/resources/manifest.webmanifest" },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
 export default function App() {
+  useSWEffect();
+
   return (
     <html lang="en">
       <head>
